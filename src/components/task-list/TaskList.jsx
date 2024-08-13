@@ -1,26 +1,7 @@
 import { Task } from "./Task";
 
-export function TaskList() {
-    const data = [
-        {
-            text: 'Reikia isivalyti dantis',
-        },
-        {
-            text: 'Reikia nusiprausti veida',
-        },
-        {
-            text: 'Reikia pasigaminti gerima',
-        },
-        {
-            text: 'Reikia sestis/stotis prie PC',
-        },
-        {
-            text: 'Reikia sukodinti krepsinio lentos uzduoti',
-        },
-        {
-            text: 'Reikia isspresti uzduoti su kolegomis',
-        },
-    ];
+export function TaskList(params) {
+    const { removeTask, data } = params;
 
     if (data.length === 0) {
         return (
@@ -32,7 +13,7 @@ export function TaskList() {
 
     return (
         <div className="list">
-            {data.map((item, index) => <Task key={index} data={item} />)}
+            {data.map((item, index) => <Task key={index} data={item} removeTask={removeTask} />)}
         </div>
     );
 }

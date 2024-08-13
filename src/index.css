@@ -23,18 +23,19 @@ form {
 }
 
 form>input {
-  font-size: 1.2rem;
   padding: 0.3em 0.5em;
+  font-size: 1.2rem;
 }
 
-form > .btnList {
+form>.btnList {
   display: flex;
 }
+
 form button {
   width: 100%;
-  padding: 0.3em 0.5rem;
+  padding: 0.3em 0.5em;
   font-size: 1.3rem;
-  line-height: 1rem;
+  line-height: 1em;
 }
 
 /* ------------------------------- */
